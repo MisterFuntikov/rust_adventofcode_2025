@@ -4,6 +4,7 @@ mod day3;
 mod day4;
 mod day5;
 mod day6;
+mod day7;
 
 const TEST_ANSWERS: [[u64; 2]; 12] = [
     [3, 6],
@@ -12,7 +13,7 @@ const TEST_ANSWERS: [[u64; 2]; 12] = [
     [13, 43],
     [3, 14],
     [4277556, 3263827],
-    [0, 0],
+    [21, 40],
     [0, 0],
     [0, 0],
     [0, 0],
@@ -27,7 +28,7 @@ const ANSWRES: [[u64; 2]; 12] = [
     [0x644, 0x24B5],
     [0x259, 0x14E9A63E9F40C],
     [0x5EA2C7FD9AD, 0x8C4A308DA41],
-    [0, 0],
+    [0x638, 0x104CC88BFF71],
     [0, 0],
     [0, 0],
     [0, 0],
@@ -35,13 +36,14 @@ const ANSWRES: [[u64; 2]; 12] = [
     [0, 0],
 ];
 
-const DAYS_FUNC: [for<'a> fn(&'a String) -> [u64; 2]; 6] = [
+const DAYS_FUNC: [for<'a> fn(&'a String) -> [u64; 2]; 7] = [
     day1::day1,
     day2::day2,
     day3::day3,
     day4::day4,
     day5::day5,
     day6::day6,
+    day7::day7,
 ];
 
 fn day(num: usize) {
@@ -51,7 +53,7 @@ fn day(num: usize) {
     assert_eq!(DAYS_FUNC[num - 1](&ex), TEST_ANSWERS[num - 1]);
     let result = DAYS_FUNC[num - 1](&path);
     assert_eq!(result, ANSWRES[num - 1]);
-    println!("{:?}", result);
+    println!("Day {num} = {:?}", result);
 }
 
 fn main() {
@@ -61,4 +63,5 @@ fn main() {
     day(4);
     day(5);
     day(6);
+    day(7);
 }
