@@ -6,6 +6,7 @@ mod day5;
 mod day6;
 mod day7;
 mod day8;
+mod day9;
 
 const TEST_ANSWERS: [[u64; 2]; 12] = [
     [3, 6],
@@ -16,7 +17,7 @@ const TEST_ANSWERS: [[u64; 2]; 12] = [
     [4277556, 3263827],
     [21, 40],
     [40, 25272],
-    [0, 0],
+    [50, 24],
     [0, 0],
     [0, 0],
     [0, 0],
@@ -31,13 +32,13 @@ const ANSWRES: [[u64; 2]; 12] = [
     [0x5EA2C7FD9AD, 0x8C4A308DA41],
     [0x638, 0x104CC88BFF71],
     [0x136C8, 0x1DBCE54],
-    [0, 0],
+    [0x11AD16D09, 0x5BCD78F4],
     [0, 0],
     [0, 0],
     [0, 0],
 ];
 
-const DAYS_FUNC: [for<'a> fn(&'a String) -> [u64; 2]; 8] = [
+const DAYS_FUNC: [for<'a> fn(&'a String) -> [u64; 2]; 9] = [
     day1::day1,
     day2::day2,
     day3::day3,
@@ -46,6 +47,7 @@ const DAYS_FUNC: [for<'a> fn(&'a String) -> [u64; 2]; 8] = [
     day6::day6,
     day7::day7,
     day8::day8,
+    day9::day9,
 ];
 
 fn day(num: usize) {
@@ -67,4 +69,5 @@ fn main() {
     day(6);
     day(7);
     day(8);
+    day(9);
 }
